@@ -36,8 +36,8 @@
     "rules": {
       "react/no-deprecated": "off",
       "no-console": "off",
-      "prettier/prettier": ["warn", {"singleQuote": true, "semi": false}],
-      "accessor-pairs": "error",
+      "prettier/prettier": ["off", {"singleQuote": false, "semi": false}],
+      "accessor-pairs": "off",
       "array-bracket-spacing": "warn",
       "array-callback-return": "error",
       "arrow-body-style": "off",
@@ -46,7 +46,7 @@
         "as-needed"
       ],
       "arrow-spacing": [
-        "warn",
+        "off",
         {
           "after": true,
           "before": true
@@ -111,7 +111,7 @@
       "indent": "off",
       "init-declarations": "off",
       "jsx-quotes": [
-        "error",
+        "warn",
         "prefer-double"
       ],
       "key-spacing": "warn",
@@ -213,7 +213,7 @@
       "no-template-curly-in-string": "error",
       "no-ternary": "off",
       "no-throw-literal": "error",
-      "no-trailing-spaces": "warn",
+      "no-trailing-spaces": "off",
       "no-undef-init": "error",
       "no-undefined": "off",
       "no-underscore-dangle": "error",
@@ -253,7 +253,7 @@
       "prefer-template": "error",
       "quote-props": "off",
       "quotes": [
-        "error",
+        "warn",
         "single",
         {
           "avoidEscape": true

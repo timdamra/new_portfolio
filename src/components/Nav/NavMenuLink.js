@@ -7,7 +7,7 @@ export function NavMenuLink(props) {
 
     return (
     <div 
-        className={Boolean(props.isMobile) ? "nav__extended--link" : "nav--link"}
+        className={props.isMobile ? "nav__extended--link" : "nav--link"}
         onClick={() => {
             props.setNavIsExtended(false)
             history.push(props.link)

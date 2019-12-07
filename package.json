@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://https://github.com/timdamra/new_portfolio",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production",
     "build:dev": "webpack --mode development",
-    "start:dev": "webpack-dev-server --open --mode development"
+    "start:dev": "webpack-dev-server --open --mode development",
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build"
   },
   "keywords": [],
   "author": "",
@@ -40,6 +43,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.7.4",
+    "gh-pages": "^2.1.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
