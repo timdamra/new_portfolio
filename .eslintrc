@@ -111,7 +111,7 @@
       "indent": "off",
       "init-declarations": "off",
       "jsx-quotes": [
-        "warn",
+        "off",
         "prefer-double"
       ],
       "key-spacing": "warn",
@@ -253,7 +253,7 @@
       "prefer-template": "error",
       "quote-props": "off",
       "quotes": [
-        "warn",
+        "off",
         "single",
         {
           "avoidEscape": true
