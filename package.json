@@ -10,7 +10,8 @@
     "build:dev": "webpack --mode development",
     "start:dev": "webpack-dev-server --open --mode development",
     "deploy": "gh-pages -d dist",
-    "predeploy": "npm run build"
+    "predeploy": "npm run build",
+    "lint": "eslint --fix --ext .js,.jsx ."
   },
   "keywords": [],
   "author": "",

@@ -29,9 +29,9 @@ module.exports = {
               use: [
                 {
                   loader: 'file-loader',
-                  options: {},
-                },
-              ],
+                  options: {}
+                }
+              ]
             },
             {
               test: /\.js$/,
