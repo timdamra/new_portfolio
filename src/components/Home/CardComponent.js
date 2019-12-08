@@ -1,9 +1,13 @@
 import React from 'react'
 import { Card, Icon, Image } from 'semantic-ui-react'
 
+const src = process.env.NODE_ENV === 'production' 
+? 'https://cdn1.imggmi.com/uploads/2019/12/8/d73912e871086fcb903a9b47f0f52c6d-full.jpg' 
+: '/public/images/pic.jpg'
+
 export const CardComponent = () => (
   <Card>
-    <Image src='/public/images/pic.jpg' wrapped ui={false} />
+    <Image src={src} wrapped ui={false} />
     <Card.Content>
       <Card.Header>Hatim Damra</Card.Header>
       <Card.Meta>
