@@ -9,7 +9,7 @@
     "build": "webpack --mode production",
     "build:dev": "webpack --mode development",
     "start:dev": "webpack-dev-server --open --mode development",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "predeploy": "npm run build"
   },
   "keywords": [],
