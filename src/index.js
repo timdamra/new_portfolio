@@ -6,6 +6,7 @@ import App from './components/App'
 import Firebase, { FirebaseContext } from './components/Firebase'
 
 import './index.css'
+import '../public/images/icon.png'
 
 ReactDOM.render(
   <FirebaseContext.Provider value={new Firebase()}>
