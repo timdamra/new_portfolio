@@ -11,8 +11,7 @@
     "build": "webpack --mode production",
     "build:dev": "webpack --mode development",
     "start:dev": "webpack-dev-server --open --mode development",
-    "deploy": "gh-pages -d dist",
-    "predeploy": "npm run build",
+    "deploy": "npm run build && firebase deploy",    
     "lint": "eslint --fix --ext .js,.jsx ."
   },
   "keywords": [],
