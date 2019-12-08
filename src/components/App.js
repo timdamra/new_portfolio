@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import React, { Component, Fragment } from 'react'
+import { Switch, Route } from 'react-router-dom'
 
 import Nav from './Nav'
 import Home from './Home'
@@ -7,7 +7,7 @@ import Home from './Home'
 export default class App extends Component {
     render() {
         return (
-            <Router>
+            <Fragment>
                 <Nav />
                 <Switch>
                     <Route exact path="/">
@@ -21,7 +21,7 @@ export default class App extends Component {
                     </Route>
                     <Route path="*" render={() => <div>Under Construction</div>} />
                 </Switch>
-            </Router>
+            </Fragment>
         )
     }
 }
