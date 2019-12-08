@@ -4,9 +4,8 @@ import CardComponent from './CardComponent'
 import './index.css'
 
 export class Home extends Component {    
-    render() {
-        console.log(process.env)
-        
+    render() {        
+
         return (
             <main className="home__grid">
                 <CardComponent />

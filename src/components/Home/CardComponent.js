@@ -2,7 +2,7 @@ import React from 'react'
 import { Card, Icon, Image } from 'semantic-ui-react'
 
 const src = process.env.NODE_ENV === 'production' 
-? 'https://timdamra.github.io/new_portfolio/public/images/pic.jpg' : '/public/images/pic.jpg'
+? '/new_portfolio/public/images/pic.jpg' : '/public/images/pic.jpg'
 
 export const CardComponent = () => (
   <Card>
