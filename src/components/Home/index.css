@@ -27,4 +27,11 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    margin-top: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+    .home__grid section {
+        width: 48%;
+    }
 }

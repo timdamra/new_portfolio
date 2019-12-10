@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import { Image } from 'semantic-ui-react'
 
+import reactPic from 'public/images/react.png'
+import reduxPic from 'public/images/redux.png'
+import nodePic from 'public/images/nodejs.png'
+import pwaPic from 'public/images/pwa.png'
+
 import CardComponent from './CardComponent'
 import InfoSection from './InfoSection'
-
-import reactPic from '../../../public/images/react.png'
-import reduxPic from '../../../public/images/redux.png'
-import nodePic from '../../../public/images/nodejs.png'
-import pwaPic from '../../../public/images/pwa.png'
 
 import './index.css'
 
@@ -16,7 +16,7 @@ export class Home extends Component {
     renderAbout = () => {
         return (
             <div key='renderAbout'>
-                <h2>Welcome To My Page!</h2>
+                <h2>Welcome To My Portfolio!</h2>
                 <h3>Interesting Fact:</h3>
                 <p>
                     I built this portfolio using React Classes/Hooks, React Router and Firebase (as a backend service).

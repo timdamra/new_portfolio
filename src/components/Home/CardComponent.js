@@ -1,6 +1,6 @@
 import React from 'react'
 import { Card, Icon, Image } from 'semantic-ui-react'
-import myPic from '../../../public/images/pic.jpg'
+import myPic from 'public/images/pic.jpg'
 
 export const CardComponent = () => (
   <Card>
