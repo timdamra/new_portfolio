@@ -9,3 +9,22 @@
     display: flex;
     justify-content: center;
 }
+
+.home__grid section {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.5rem;
+}
+
+.home__grid section div:first-child {
+    text-align: center;    
+    font-size: 1.2rem;
+}
+
+.home__grid__images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
