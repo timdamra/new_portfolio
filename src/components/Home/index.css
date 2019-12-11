@@ -13,7 +13,7 @@
 .home__grid section {
     display: flex;
     flex-direction: column;
-    padding: 0 1.5rem;
+    padding: 0 1.6rem;
 }
 
 .home__grid section div:first-child {

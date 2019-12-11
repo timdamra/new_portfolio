@@ -3,8 +3,10 @@ import { Switch, Route } from 'react-router-dom'
 
 import Nav from './Nav'
 import Home from './Home'
+import Contact from './Contact'
+import Portfolio from './Portfolio'
 
-export default class App extends Component {
+export default class App extends Component {    
     render() {
         return (
             <Fragment>
@@ -14,10 +16,10 @@ export default class App extends Component {
                         <Home />
                     </Route>
                     <Route path="/portfolio">
-                        <div>Coming Soon!</div>
+                        <Portfolio />
                     </Route>
                     <Route path="/contact">
-                        <div>Contact</div>
+                        <Contact />
                     </Route>
                     <Route path="*" render={() => <div>Under Construction</div>} />
                 </Switch>

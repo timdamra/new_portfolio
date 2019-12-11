@@ -25,7 +25,13 @@ export class Home extends Component {
                     So despite this portfolio&apos;s simple/humble appearance, it has the tools, engineering and capability 
                     to run an application much larger and much more complex than itself! You can see the code here: 
                 </p>
-                <a href='https://github.com/timdamra/new_portfolio'>Code on Github</a>
+                <a 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    href='https://github.com/timdamra/new_portfolio'
+                >
+                        Code on Github
+                </a>
             </div>
         )
     }

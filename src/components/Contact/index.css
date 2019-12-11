@@ -1,0 +1,16 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
+.contact a {    
+    color: inherit;
+    text-align: center;
+    font-size: 4rem;
+    padding: 3.2rem 0;
+}
+
+.contact p {
+    font-size: 1.6rem;
+}
