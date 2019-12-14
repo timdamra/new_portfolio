@@ -1,11 +1,28 @@
 import React from 'react'
 import { Image } from 'semantic-ui-react'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
+import { useGlobalState } from 'state'
+import { ADD_OPEN_PROJECT, REMOVE_OPEN_PROJECT } from 'actions'
+
+import Books from 'components/Project/Books'
 import bitcoin from 'public/images/bitcoin.png'
 import './index.css'
 
 export const Portfolio = () => {
+    const param = useParams()[0]
+    const { dispatch, state } = useGlobalState() 
+
+    React.useEffect(() => {
+        dispatch({ type: ADD_OPEN_PROJECT, payload: param })
+
+        return () => dispatch({ type: REMOVE_OPEN_PROJECT })
+    }, [param])
+
+    if (state.openProject === '/books') {        
+        return <Books />
+    }
+
     return (
         <section className="portfolio">
             <div className="portfolio__project">
@@ -18,7 +35,7 @@ export const Portfolio = () => {
                     Cryptocurrency Market App
                 </a>
             </div>
-            <Link to='/books'>Books</Link>
+            <Link to='/portfolio/books'>Books</Link>
         </section>
     )
 }
