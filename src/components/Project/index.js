@@ -21,6 +21,10 @@ export const Project = () => {
     }, [project])
     
     if (state.openProject in paramMap) {
+        console.log({
+            state,
+            project
+        })
         return paramMap[state.openProject]()
     }
 
