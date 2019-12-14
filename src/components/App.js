@@ -18,15 +18,15 @@ export default class App extends Component {
                     <Route exact path="/">
                         <Home />
                     </Route>
-                    <Route exact path="/portfolio">
-                        <Portfolio />
-                    </Route>
                     <Route 
                       path="/portfolio/:project"
                       render={() => {
                           return <Project />
                       }}
-                    />                                             
+                    />
+                    <Route exact path="/portfolio">
+                        <Portfolio />
+                    </Route>                                                                 
                     <Route path="/contact">
                         <Contact />
                     </Route>
