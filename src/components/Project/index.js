@@ -20,12 +20,8 @@ export const Project = () => {
         return () => dispatch({ type: REMOVE_OPEN_PROJECT })
     }, [project])
     
-    if (state.openProject in paramMap) {
-        console.log({
-            state,
-            project
-        })
-        
+    if (state.openProject in paramMap) {        
+
         return paramMap[state.openProject]()
     }
 
