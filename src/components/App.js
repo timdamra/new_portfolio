@@ -18,10 +18,10 @@ export default class App extends Component {
                     <Route exact path="/">
                         <Home />
                     </Route>
-                    <Route path="/portfolio/books">
+                    <Route path="/books">
                         <Books />
                     </Route>
-                    <Route exact path="/portfolio">
+                    <Route path="/portfolio">
                         <Portfolio />
                     </Route>                                                                 
                     <Route path="/contact">

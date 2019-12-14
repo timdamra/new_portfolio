@@ -18,7 +18,7 @@ export const Portfolio = () => {
                     Cryptocurrency Market App
                 </a>
             </div>
-            <Link to='/portfolio/books'>Books</Link>
+            <Link to='/books'>Books</Link>
         </section>
     )
 }
