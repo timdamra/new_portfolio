@@ -7,7 +7,7 @@ import Nav from './Nav'
 import Home from './Home'
 import Contact from './Contact'
 import Portfolio from './Portfolio'
-import Project from './Project'
+import Books from './Project/Books'
 
 export default class App extends Component {    
     render() {        
@@ -18,19 +18,16 @@ export default class App extends Component {
                     <Route exact path="/">
                         <Home />
                     </Route>
-                    <Route 
-                      path="/portfolio/:project"
-                      render={() => {
-                          return <Project />
-                      }}
-                    />
+                    <Route path="/portfolio/books">
+                        <Books />
+                    </Route>
                     <Route exact path="/portfolio">
                         <Portfolio />
                     </Route>                                                                 
                     <Route path="/contact">
                         <Contact />
                     </Route>
-                    <Route path="*" render={() => <div>Under Construction</div>} />
+                    <Route path="/*" render={() => <div>Under Construction</div>} />
                 </Switch>
             </StateProvider>
         )
