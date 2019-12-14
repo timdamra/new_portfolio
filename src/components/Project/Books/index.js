@@ -16,7 +16,7 @@ export const Books = () => {
     
     if (state.openProject === 'books') {        
 
-        return <Books />
+        return <div>Books</div>
     }
 
     return null
