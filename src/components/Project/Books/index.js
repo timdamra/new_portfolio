@@ -6,9 +6,7 @@ import { ADD_OPEN_PROJECT, REMOVE_OPEN_PROJECT } from 'actions'
 
 export const Books = () => {    
     const { dispatch, state } = useGlobalState()   
-    const { project } = useParams()   
-
-    //console.log(useParams())
+    const { project } = useParams()      
     
     React.useEffect(() => {
         dispatch({ type: ADD_OPEN_PROJECT, payload: project })
