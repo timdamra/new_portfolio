@@ -1,5 +1,6 @@
 import React from 'react'
 import { Image } from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
 
 import bitcoin from 'public/images/bitcoin.png'
 import './index.css'
@@ -17,6 +18,7 @@ export const Portfolio = () => {
                     Cryptocurrency Market App
                 </a>
             </div>
+            <Link to='/portfolio/books'>Books</Link>
         </section>
     )
 }
