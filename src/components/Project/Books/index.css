@@ -2,3 +2,24 @@
     margin: 8% auto;
     width: 72%;
 }
+
+.books__tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: black 1px solid;
+}
+
+.books__tile:hover {
+    cursor: pointer;
+}
+
+.books__tile--odd {
+    background-color: aliceblue;
+}
+
+@media screen and (min-width: 768px) {
+    .books {    
+        width: 48%;       
+    }
+}

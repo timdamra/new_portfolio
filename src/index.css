@@ -43,6 +43,22 @@ body {
     padding-bottom: 8px;
 }
 
+.p-t-12 {
+    padding-top: 12px;
+}
+
+.p-b-12 {
+    padding-bottom: 12px;
+}
+
+.p-t-24 {
+    padding-top: 24px;
+}
+
+.p-b-24 {
+    padding-bottom: 24px;
+}
+
 
 /* margins */
 .m-t-4 {
@@ -61,3 +77,24 @@ body {
     margin-bottom: 8px;
 }
 
+.m-t-12 {
+    margin-top: 12px;
+}
+
+.m-b-12 {
+    margin-bottom: 12px;
+}
+
+.m-t-24 {
+    margin-top: 24px;
+}
+
+.m-b-24 {
+    margin-bottom: 24px;
+}
+
+/* TEXT */
+
+.ta-center {
+    text-align: center;
+}

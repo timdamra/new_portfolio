@@ -35,7 +35,10 @@ export const Portfolio = () => {
                     Cryptocurrency Market App
                 </a>
             </div>
-            <Link to='/portfolio/books'>Books</Link>
+            <Link className='portfolio__project' to='/portfolio/books'>
+                <i className="book icon"></i>
+                <p>Search Google Books API</p>
+            </Link>
         </section>
     )
 }

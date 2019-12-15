@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Suspense, lazy } from 'react'
 import { Image } from 'semantic-ui-react'
 
 import reactPic from 'public/images/react.png'
@@ -6,11 +6,11 @@ import reduxPic from 'public/images/redux.png'
 import nodePic from 'public/images/nodejs.png'
 import pwaPic from 'public/images/pwa.png'
 
-import CardComponent from './CardComponent'
 import InfoSection from './InfoSection'
 
 import './index.css'
 
+const CardComponent = lazy(() => import('./CardComponent'))
 
 export class Home extends Component {  
     renderAbout = () => {
@@ -55,7 +55,9 @@ export class Home extends Component {
 
         return (
             <main className="home__grid">
-                <CardComponent />
+                <Suspense fallback={<div>Loading...</div>}>
+                    <CardComponent />
+                </Suspense>
                 <InfoSection renderProps={renderProps} />
             </main>
         )
