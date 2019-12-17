@@ -10,7 +10,7 @@ import '../public/images/icon.png'
 
 ReactDOM.render(
   <FirebaseContext.Provider value={new Firebase()}>
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router basename={process.env.PUBLIC_URL || '/'}>
         <App />
     </Router>
   </FirebaseContext.Provider>, 
