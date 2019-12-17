@@ -9,7 +9,10 @@ import Contact from './Contact'
 import Portfolio from './Portfolio'
 
 export default class App extends Component {    
-    render() {        
+    render() {     
+        
+        console.log(process.env.PUBLIC_URL)
+
         return (
             <StateProvider>
                 <Nav />
