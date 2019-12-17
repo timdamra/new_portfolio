@@ -6,11 +6,10 @@ import reduxPic from 'public/images/redux.png'
 import nodePic from 'public/images/nodejs.png'
 import pwaPic from 'public/images/pwa.png'
 
-import InfoSection from './InfoSection'
-
 import './index.css'
 
 const CardComponent = lazy(() => import('./CardComponent'))
+const InfoSection = lazy(() => import('./InfoSection'))
 
 export class Home extends Component {  
     renderAbout = () => {
@@ -56,9 +55,11 @@ export class Home extends Component {
         return (
             <main className="home__grid">
                 <Suspense fallback={<div>Loading...</div>}>
-                    <CardComponent />
+                    <InfoSection renderProps={renderProps} />
                 </Suspense>
-                <InfoSection renderProps={renderProps} />
+                <Suspense fallback={<div>Loading...</div>}>
+                    <CardComponent />
+                </Suspense>                
             </main>
         )
     }
