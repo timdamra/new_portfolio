@@ -53,6 +53,9 @@ module.exports = {
             favicon: './public/images/icon.png'
         })
     ],
+    devServer: {
+      historyApiFallback: true
+    },
     resolve: {
       alias: {        
         components: path.resolve(__dirname, 'src/components'),        

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import NavMenuLink from './NavMenuLink'
-import { LABELS } from './content'
+import { NAV_LABELS } from '../content'
 import './index.css'
 
 export function Nav() {
@@ -44,8 +44,8 @@ export function Nav() {
             {shouldDisplayNavIcons()}
             {
                 displayNav &&
-                LABELS.length > 0 && 
-                LABELS.map(navItem => (
+                NAV_LABELS.length > 0 && 
+                NAV_LABELS.map(navItem => (
                     <NavMenuLink 
                       label={navItem.label}
                       key={navItem.label}

@@ -7,6 +7,7 @@ import Nav from './Nav'
 import Home from './Home'
 import Contact from './Contact'
 import Portfolio from './Portfolio'
+import Books from './Project/Books'
 
 export default class App extends Component {    
     render() {
@@ -16,8 +17,11 @@ export default class App extends Component {
                 <Switch>
                     <Route exact path="/">
                         <Home />
-                    </Route>                                       
-                    <Route path="/portfolio*">
+                    </Route>   
+                    <Route path="/books">
+                        <Books />    
+                    </Route>                                     
+                    <Route path="/portfolio">
                         <Portfolio />    
                     </Route>                                                                                       
                     <Route path="/contact">
