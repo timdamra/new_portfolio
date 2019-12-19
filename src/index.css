@@ -98,3 +98,19 @@ body {
 .ta-center {
     text-align: center;
 }
+
+/* COMPONENT-SPECIFIC */
+
+.card--center {
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio__project a img {
+    width: 100%;
+}
+
+.portfolio__project .description {
+    line-height: initial;
+    font-size: 1.4rem;
+}

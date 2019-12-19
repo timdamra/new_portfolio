@@ -17,10 +17,25 @@
 }
 
 .portfolio__project i {
-    font-size: 4rem;
+    font-size: 4rem;    
 }
 
-@media screen and (min-width: 768px) {
+.portfolio__icon--link a {
+    padding-top: 24px;
+}
+
+.portfolio__project--desc {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 12px;
+}
+
+.portfolio__project--desc p {
+    font-size: 1rem;
+    padding-top: 4px;
+}
+
+@media screen and (min-width: 768px) {    
     .portfolio__project {    
         flex-direction: row;  
         width: 48%;        
