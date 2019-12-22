@@ -36,8 +36,12 @@
 }
 
 @media screen and (min-width: 768px) {    
+    .portfolio {        
+        flex-direction: row;       
+    }
+
     .portfolio__project {    
         flex-direction: row;  
-        width: 48%;        
+        width: 24%;        
     }
 }

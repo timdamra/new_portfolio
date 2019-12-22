@@ -3,6 +3,10 @@
     width: 72%;
 }
 
+.books > .ui.input {
+    width: 96%;
+}
+
 .books__tile {
     display: flex;
     flex-direction: column;
@@ -18,8 +22,17 @@
     background-color: aliceblue;
 }
 
+.books__tile__buttons {
+    display: flex;
+    flex-direction: row;
+}
+
 @media screen and (min-width: 768px) {
     .books {    
         width: 48%;       
+    }
+
+    .books > .ui.input {
+        width: 72%;
     }
 }
