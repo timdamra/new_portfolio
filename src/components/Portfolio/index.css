@@ -20,6 +20,10 @@
     font-size: 4rem;    
 }
 
+.portfolio__project .ui.card .header {
+    color: darkslateblue;
+}
+
 .portfolio__icon--link a {
     padding-top: 24px;
 }

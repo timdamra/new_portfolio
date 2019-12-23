@@ -101,16 +101,27 @@ body {
 
 /* COMPONENT-SPECIFIC */
 
+.ui.card:hover {
+    box-shadow: 0 10px 20px #c7c7c7;    
+    transform: translate3D(0,-5px,0);
+}
+
 .card--center {
     display: flex;
     justify-content: center;
 }
 
 .portfolio__project a img {
-    width: 100%;
+    width: 60%;
 }
 
 .portfolio__project .description {
     line-height: initial;
     font-size: 1.4rem;
+}
+
+@media screen and (min-width: 768px) {    
+    .portfolio__project a img {
+        width: 40%;
+    }
 }

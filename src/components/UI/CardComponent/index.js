@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Card, Icon, Image } from 'semantic-ui-react'
 
+import LabelComponent from '../LabelComponent'
+
 export const CardComponent = props => (
   <Card>
     {
@@ -21,7 +23,19 @@ export const CardComponent = props => (
         <span className='date'>{props.meta}</span>
       </Card.Meta>
       <Card.Description>
-        {props.description}
+        {props.labelList &&
+        props.labelList.length > 0 && 
+        !props.description ? (
+          props.labelList.map((label, idx) => {            
+            return (
+              <LabelComponent
+                  color='teal'                    
+                  label={label}
+                  key={label + idx}
+              />
+            )
+          })
+        ) : props.description}
       </Card.Description>
     </Card.Content>
     <Card.Content extra>
@@ -37,6 +51,7 @@ CardComponent.propTypes = {
   header: PropTypes.string,
   meta: PropTypes.string,
   icon: PropTypes.string,
+  labelList: PropTypes.array,
   description: PropTypes.string,
   link: PropTypes.string,
   imgIcon: PropTypes.string

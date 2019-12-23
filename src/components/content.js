@@ -7,14 +7,13 @@ export const NAV_LABELS = [
 export const PORTFOLIO_CONTENT = {
     crypto: {
         header: 'Cryptocurrency Market App',
-        link: 'https://cryptocurrency-app.herokuapp.com/',
-        description: `I built this project during the crazy cryptocurrency hype of late 2017.  I used the following technologies
-         in building this app: React, Redux, React Router, Webpack, Heroku, Victory Charts, Twitter API, Reddit API, CryptoCompare API`
+        link: 'https://cryptocurrency-app.herokuapp.com/',        
+        labelList: ['Redux', 'React', 'Heroku', 'Victory Charts', 'Twitter API', 'Reddit API']
     },
     books: {
         header: 'Search Google Books API',
-        link: '/books',
-        description: `React, Redux & Google Books API`
+        link: '/books',        
+        labelList: ['React', 'Hooks', 'Webpack', 'Firebase', 'Google Books API', 'React Router']
     }
 }
 

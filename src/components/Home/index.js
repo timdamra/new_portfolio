@@ -21,11 +21,21 @@ export class Home extends Component {
                 <h3>Interesting Fact:</h3>
                 <p>
                     I built this portfolio using React Classes/Hooks, React Router and Firebase (as a backend service).
-                    I wrote a &apos;mini&apos; Redux-like state management library to manage global application state using React hooks
-                    and React.Context API.  In building it I used a custom Webpack build and custom linting/styling.  
-                    I&apos;m in the process of adding a complete test environment using Jest/Enzyme and adding CI/CD very soon as well.  
-                    So despite this portfolio&apos;s simple/humble appearance, it has the tools, engineering and capability 
-                    to run an application much larger and much more complex than itself! You can see the code here: 
+                    I wrote a &apos;mini&apos; 
+                    <a 
+                        href="https://github.com/timdamra/new_portfolio/blob/master/src/state/index.js"
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                    > Redux-like state management library </a>
+                    to manage global application state using React hooks and React.Context API.  In building it I used 
+                    a <a 
+                        href="https://github.com/timdamra/new_portfolio/blob/master/webpack.config.js"
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                    > custom Webpack configuration </a> and custom linting/styling.  I&apos;m in the process of adding a complete test 
+                    environment using Jest/Enzyme and adding CI/CD very soon as well.  So despite this portfolio&apos;s 
+                    simple/humble appearance, it has the tools, engineering and capability to run an application much larger 
+                    and much more complex than itself! You can see the code here: 
                 </p>
                 <a 
                     target="_blank" 

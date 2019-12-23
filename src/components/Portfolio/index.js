@@ -14,8 +14,16 @@ export const Portfolio = () => {
     const param = useParams()[0]
     const { dispatch } = useGlobalState() 
     const {
-        crypto: { header: cryptoHeader, link: cryptoLink, description: cryptoDescription },
-        books: { header: booksHeader, link: booksLink, description: booksDescription }
+        crypto: { 
+            header: cryptoHeader, 
+            link: cryptoLink, 
+            labelList: cryptoList
+        },
+        books: { 
+            header: booksHeader, 
+            link: booksLink, 
+            labelList: booksList
+        }
     } = PORTFOLIO_CONTENT
 
     React.useEffect(() => {
@@ -31,8 +39,8 @@ export const Portfolio = () => {
                     <CardComponent 
                         pic={bitcoin}
                         header={cryptoHeader}
-                        description={cryptoDescription}
-                        link={cryptoLink}
+                        labelList={cryptoList}
+                        link={cryptoLink}                        
                     />
                 </Suspense>                  
             </div>
@@ -41,8 +49,8 @@ export const Portfolio = () => {
                     <CardComponent 
                         imgIcon='book icon'
                         header={booksHeader}
-                        description={booksDescription}
-                        link={booksLink}
+                        labelList={booksList}
+                        link={booksLink}                        
                     />
                 </Suspense> 
             </div>            

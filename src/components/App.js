@@ -1,13 +1,14 @@
-import React, { Component } from 'react'
+import React, { Component, Suspense, lazy } from 'react'
 import { Switch, Route } from 'react-router-dom'
 
 import { StateProvider } from 'state'
 
 import Nav from './Nav'
 import Home from './Home'
-import Contact from './Contact'
 import Portfolio from './Portfolio'
 import Books from './Project/Books'
+
+const Contact = lazy(() => import('./Contact'))
 
 export default class App extends Component {    
     render() {
@@ -25,7 +26,9 @@ export default class App extends Component {
                         <Portfolio />    
                     </Route>                                                                                       
                     <Route path="/contact">
-                        <Contact />
+                        <Suspense fallback={<div>Loading...</div>}>
+                            <Contact />
+                        </Suspense>
                     </Route>
                     <Route path="/*" render={() => <div>Under Construction</div>} />
                 </Switch>
