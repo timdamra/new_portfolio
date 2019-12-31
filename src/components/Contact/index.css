@@ -28,14 +28,6 @@
     margin-bottom: 2rem;
 }
 
-.contact__div-block:nth-child(2) {
-    text-align: center;
-}
-
-.contact__div-block:nth-child(3) {
-    text-align: end;
-}
-
 .contact--icon {
     font-size: 3.2rem;    
 }
@@ -50,15 +42,7 @@
     .contact__div-block {
         margin-bottom: 2rem;
         text-align: start;
-    }
-
-    .contact__div-block:nth-child(2) {
-        text-align: start;
-    }
-    
-    .contact__div-block:nth-child(3) {
-        text-align: start;
-    }
+    }    
 
     .contact > div:nth-child(2) {
         margin: 24% 0 0 4%;        
