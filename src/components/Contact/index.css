@@ -4,11 +4,20 @@
     margin: 20% auto;   
 }
 
-.contact > div {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.contact > div {    
+    flex-direction: column;    
     padding-bottom: 3.2rem;
+    margin: 1rem;
+    justify-content: center;
+}
+
+.contact > div:nth-child(2) > div {
+    margin-bottom: 2rem;
+}
+
+.contact > div:nth-child(1) > img {
+    border-radius: 12px;
+    border: 2px solid skyblue;
 }
 
 .contact p {
@@ -30,8 +39,13 @@
         padding-left: 32px;
     }
 
-    .contact {        
+    .contact {    
+        flex-direction: row;    
         max-width: 600px;
         margin: 4% 24%;   
+    }
+
+    .contact > div:nth-child(2) {
+        margin: 24% 0 0 4%;
     }
 }
