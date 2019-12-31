@@ -1,18 +1,12 @@
 .contact {
     display: flex;
     flex-direction: column;    
-    margin: 20% auto;   
+    margin: 8% auto;   
 }
 
 .contact > div {    
     flex-direction: column;    
-    padding-bottom: 3.2rem;
-    margin: 1rem;
-    justify-content: center;
-}
-
-.contact > div:nth-child(1) {
-    order: 2;
+    padding-bottom: 3.2rem;    
 }
 
 .contact > div:nth-child(1) > img {
@@ -20,12 +14,16 @@
     border: 2px solid skyblue;
 }
 
+.contact > div:nth-child(2) {
+    text-align: center;
+}
+
 .contact p {
     font-size: 1.6rem;
 }
 
-.contact__div-block {
-    margin-bottom: 2rem;
+.contact__span-block {
+    margin: 0 0.4rem 0 0.4rem;
 }
 
 .contact--icon {
@@ -35,16 +33,20 @@
 @media screen and (min-width: 768px) {
     .contact {    
         flex-direction: row;    
-        max-width: 600px;
-        margin: 4% 24%;   
+        max-width: 800px;
+        margin: 4% 22%;   
     }
 
-    .contact__div-block {
+    .contact__span-block {
         margin-bottom: 2rem;
         text-align: start;
     }    
 
+    .contact > div:nth-child(1) {
+        width: 64%;
+    } 
+
     .contact > div:nth-child(2) {
         margin: 24% 0 0 4%;        
-    }    
+    }   
 }

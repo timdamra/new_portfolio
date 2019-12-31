@@ -13,45 +13,39 @@ export const Contact = () => {
                 </Suspense>
             </div>
             <div>
-                <div className="contact__div-block">
-                    <div>
-                        <a
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            href='https://github.com/timdamra'
-                            className='contact--icon'
-                        >
-                            <i className="github icon"></i>                    
-                        </a>
-                        <p>Github</p>
-                    </div>                    
-                </div>
-                <div className="contact__div-block">
-                    <div>
-                        <a
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            href='https://www.linkedin.com/in/hatimdamra/'
-                            className='contact--icon'
-                        >
-                            <i className="linkedin icon"></i>                    
-                        </a>
-                        <p>LinkedIn</p>
-                    </div>                    
-                </div>
-                <div className="contact__div-block">
-                    <div>
-                        <a
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            href='mailto:hdamra@gmail.com'
-                            className='contact--icon'
-                        >
-                            <i className="google icon"></i>                    
-                        </a>
-                        <p>Email</p>
-                    </div>
-                </div>
+                <span className="contact__span-block">
+                    <a
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        href='https://github.com/timdamra'
+                        className='contact--icon'
+                    >
+                        <i className="github icon"></i>                    
+                    </a>                        
+                </span>
+                <span className="contact__span-block">
+                    <a
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        href='https://www.linkedin.com/in/hatimdamra/'
+                        className='contact--icon'
+                    >
+                        <i className="linkedin icon"></i>                    
+                    </a>                        
+                </span>
+                <span className="contact__span-block">
+                    <a
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        href='mailto:hdamra@gmail.com'
+                        className='contact--icon'
+                    >
+                        <i className="google icon"></i>                    
+                    </a>
+                </span>
+                <p>Please feel free to contact me about any opportunities you want to discuss, feedback you want me to hear or 
+                    just to say hi, Cheers!
+                </p>
             </div>
         </section>
     )
