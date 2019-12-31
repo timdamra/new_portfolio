@@ -13,7 +13,7 @@ export const Contact = () => {
                 </Suspense>
             </div>
             <div>
-                <div>
+                <div className="contact__div-block">
                     <div>
                         <a
                             target="_blank" 
@@ -26,7 +26,7 @@ export const Contact = () => {
                         <p>Github</p>
                     </div>                    
                 </div>
-                <div>
+                <div className="contact__div-block">
                     <div>
                         <a
                             target="_blank" 
@@ -39,7 +39,7 @@ export const Contact = () => {
                         <p>LinkedIn</p>
                     </div>                    
                 </div>
-                <div>
+                <div className="contact__div-block">
                     <div>
                         <a
                             target="_blank" 

@@ -11,8 +11,8 @@
     justify-content: center;
 }
 
-.contact > div:nth-child(2) > div {
-    margin-bottom: 2rem;
+.contact > div:nth-child(1) {
+    order: 2;
 }
 
 .contact > div:nth-child(1) > img {
@@ -24,9 +24,16 @@
     font-size: 1.6rem;
 }
 
-.contact--link {
-    font-size: 1.2rem;
-    padding-left: 12px;
+.contact__div-block {
+    margin-bottom: 2rem;
+}
+
+.contact__div-block:nth-child(2) {
+    text-align: center;
+}
+
+.contact__div-block:nth-child(3) {
+    text-align: end;
 }
 
 .contact--icon {
@@ -34,18 +41,26 @@
 }
 
 @media screen and (min-width: 768px) {
-    .contact--link {
-        font-size: 2rem;
-        padding-left: 32px;
-    }
-
     .contact {    
         flex-direction: row;    
         max-width: 600px;
         margin: 4% 24%;   
     }
 
-    .contact > div:nth-child(2) {
-        margin: 24% 0 0 4%;
+    .contact__div-block {
+        margin-bottom: 2rem;
+        text-align: start;
     }
+
+    .contact__div-block:nth-child(2) {
+        text-align: start;
+    }
+    
+    .contact__div-block:nth-child(3) {
+        text-align: start;
+    }
+
+    .contact > div:nth-child(2) {
+        margin: 24% 0 0 4%;        
+    }    
 }
