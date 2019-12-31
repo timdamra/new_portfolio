@@ -20,6 +20,7 @@
 
 .contact p {
     font-size: 1.6rem;
+    padding: 0 24px;
 }
 
 .contact__span-block {
@@ -30,10 +31,16 @@
     font-size: 3.2rem;    
 }
 
+.contact .ui.medium.image {
+    height: 320px;
+    width: auto;
+    margin: 0 auto;
+}
+
 @media screen and (min-width: 768px) {
     .contact {    
         flex-direction: row;    
-        max-width: 800px;
+        max-width: 720px;
         margin: 4% 22%;   
     }
 
@@ -48,5 +55,11 @@
 
     .contact > div:nth-child(2) {
         margin: 24% 0 0 4%;        
-    }   
+    } 
+    
+    .contact .ui.medium.image {
+        height: 360px;
+        width: auto;
+        margin: 0 auto;
+    }
 }

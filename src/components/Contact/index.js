@@ -19,6 +19,7 @@ export const Contact = () => {
                         rel="noopener noreferrer"
                         href='https://github.com/timdamra'
                         className='contact--icon'
+                        title="Github"
                     >
                         <i className="github icon"></i>                    
                     </a>                        
@@ -29,6 +30,7 @@ export const Contact = () => {
                         rel="noopener noreferrer"
                         href='https://www.linkedin.com/in/hatimdamra/'
                         className='contact--icon'
+                        title="LinkedIn"
                     >
                         <i className="linkedin icon"></i>                    
                     </a>                        
@@ -39,6 +41,7 @@ export const Contact = () => {
                         rel="noopener noreferrer"
                         href='mailto:hdamra@gmail.com'
                         className='contact--icon'
+                        title="Gmail"
                     >
                         <i className="google icon"></i>                    
                     </a>
