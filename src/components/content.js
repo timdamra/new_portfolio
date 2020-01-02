@@ -14,6 +14,11 @@ export const PORTFOLIO_CONTENT = {
         header: 'Search Google Books API',
         link: '/books',        
         labelList: ['React', 'Hooks', 'Webpack', 'Firebase', 'Google Books API', 'React Router']
+    },
+    tictactoe: {
+        header: 'Tic Tac Toe built with React',
+        link: '/tictactoe',
+        labelList: ['React', 'Hooks', 'Flexbox', 'Responsive Design', 'Redux (My Own Implementation)']
     }
 }
 

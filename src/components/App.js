@@ -7,6 +7,7 @@ import Nav from './Nav'
 import Home from './Home'
 import Portfolio from './Portfolio'
 import Books from './Project/Books'
+import TicTacToe from './Project/TicTacToe'
 
 const Contact = lazy(() => import('./Contact'))
 
@@ -21,7 +22,10 @@ export default class App extends Component {
                     </Route>   
                     <Route path="/books">
                         <Books />    
-                    </Route>                                     
+                    </Route> 
+                    <Route path="/tictactoe">
+                        <TicTacToe />    
+                    </Route>                                    
                     <Route path="/portfolio">
                         <Portfolio />    
                     </Route>                                                                                       

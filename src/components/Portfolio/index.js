@@ -23,6 +23,11 @@ export const Portfolio = () => {
             header: booksHeader, 
             link: booksLink, 
             labelList: booksList
+        },
+        tictactoe: {
+            header: ticTacHeader,
+            link: ticTacLink,
+            labelList: ticTacList
         }
     } = PORTFOLIO_CONTENT
 
@@ -53,7 +58,17 @@ export const Portfolio = () => {
                         link={booksLink}                        
                     />
                 </Suspense> 
-            </div>            
+            </div>  
+            <div className="portfolio__project portfolio__icon--link">
+                <Suspense fallback={<div>Loading...</div>}>
+                    <CardComponent 
+                        imgIcon='game icon'
+                        header={ticTacHeader}
+                        labelList={ticTacList}
+                        link={ticTacLink}
+                    />
+                </Suspense>    
+            </div>         
         </section>
     )
 }
