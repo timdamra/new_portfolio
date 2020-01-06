@@ -1,40 +1,56 @@
 .tictactoe {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1.2rem;
 }
 
 .tictactoe > div {
-    display: flex;
-    flex-direction: row;
-    width: 88%;
-    height: 8rem;
+  display: flex;
+  flex-direction: row;
+  width: 88%;
+  height: 8rem;
 }
 
 .tictactoe > div > span {
-    width: 30%;
-    padding: 12px;
-    padding-top: 36px;
-    font-size: 2.4rem;
-    border-bottom: 4px solid darkslateblue;
-    border-right: 4px solid darkslateblue;
-    text-align: center;
+  width: 30%;
+  padding: 12px;
+  padding-top: 36px;
+  font-size: 2.4rem;
+  border-bottom: 4px solid darkslateblue;
+  border-right: 4px solid darkslateblue;
+  text-align: center;
 }
 
 .tictactoe > div > span:hover {
-    background-color: lightskyblue;
+  background-color: lightskyblue;
 }
 
 .tictactoe > div:nth-child(3) span {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .tictactoe > div > span:last-child {
-    border-right: none;
+  border-right: none;
 }
 
 .tictactoe .ui.button {
-    margin: 2rem 2rem 0 0;
-    padding: 1.2rem 4rem;
+  margin: 2rem 2rem 0 0;
+  padding: 1.2rem 4rem;
+}
+
+.ui.mini.modal {
+  width: 80%;
+}
+
+@media screen and (min-width: 600px) {
+  .tictactoe > div {
+    width: 48%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .tictactoe .ui.button {
+    margin: 2rem 4rem 0 0;
+  }
 }

@@ -8,7 +8,6 @@ import './index.css'
 
 export const TicTacToe = () => {
   const { state, dispatch } = useGlobalState()
-  // console.log(state)
   const {
     ticTacModalIsOpen,
     ticTacStartButtonIsHidden,
@@ -113,7 +112,7 @@ export const TicTacToe = () => {
         <Button
           onClick={() => dispatch({ type: actions.TIC_TAC_TOE_OPEN_MODAL })}
         >
-          START
+          CHOOSE LETTER
         </Button>
       )}
       <Modal

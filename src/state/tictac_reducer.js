@@ -29,7 +29,7 @@ export const defaultTicTacState = {
   }
 }
 
-export function checkForWinner(ticTacBoard) {
+export function checkForWinner(ticTacBoard, state) {
   return Object.entries(ticTacBoard)
     .map(square => {
       let index1 = Number(square[0])
@@ -39,6 +39,14 @@ export function checkForWinner(ticTacBoard) {
     .reduce((acc, curr, idx) => {
       // curr[1] === X or O value
       // typeof idx === number && typeof curr[0] === number (index)
+
+      /**
+       * - CHECKS FOR:
+       *  - INDEX OF SQUARE IS WITHIN THE BOARD (0 - 8) VIA ARETRUTHY FUNCTION
+       *  - HORIZONTAL SEQUENCE IN TOP, MIDDLE & BOTTOM LAYERS
+       *  - DIAGONAL IN MIDDLE LAYER SQUARES
+       *  - VERTICAL (SAME CHARACTER IN TOP, MIDDLE BOTTOM)
+       */
 
       let index1 = ticTacBoard[idx]
       let index2 = ticTacBoard[idx + 1]
@@ -56,12 +64,14 @@ export function checkForWinner(ticTacBoard) {
         }
       } else if (curr[0] > 2 && curr[0] <= 5) {
         let isDiagonalWin =
-          (areTruthy(index1, ticTacBoard[idx - 2], ticTacBoard[idx + 2]) &&
-            index1 === ticTacBoard[idx - 2] &&
-            index1 === ticTacBoard[idx + 2]) ||
-          (areTruthy(index1, ticTacBoard[idx - 4], ticTacBoard[idx + 4]) &&
-            index1 === ticTacBoard[idx - 4] &&
-            index1 === ticTacBoard[idx + 4])
+          (ticTacBoard[0] === curr[1] &&
+            areTruthy(ticTacBoard[0], ticTacBoard[4], ticTacBoard[8]) &&
+            ticTacBoard[0] === ticTacBoard[4] &&
+            ticTacBoard[0] === ticTacBoard[8]) ||
+          (ticTacBoard[2] === curr[1] &&
+            areTruthy(ticTacBoard[2], ticTacBoard[4], ticTacBoard[6]) &&
+            ticTacBoard[2] === ticTacBoard[4] &&
+            ticTacBoard[2] === ticTacBoard[6])
 
         if (
           isDiagonalWin ||
@@ -91,7 +101,7 @@ export default (state, action) => {
     ...state.ticTacBoard,
     [payload]: state.usersCharacter
   }
-  const userIsWinner = checkForWinner(ticTacBoard)
+  const userIsWinner = checkForWinner(ticTacBoard, state)
   let score
 
   if (userIsWinner) {
@@ -114,7 +124,7 @@ export default (state, action) => {
       if (!ticTacBoard[i]) {
         ticTacBoard[i] = state.computerCharacter
 
-        const computerIsWinner = checkForWinner(ticTacBoard)
+        const computerIsWinner = checkForWinner(ticTacBoard, state)
 
         if (computerIsWinner) {
           score = {
