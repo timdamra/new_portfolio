@@ -12,10 +12,6 @@ export const defaultTicTacState = {
   computerCharacter,
   gameIsOver: false,
   winner: null,
-  score: {
-    X: 0,
-    O: 0
-  },
   ticTacBoard: {
     0: null,
     1: null,
@@ -27,6 +23,11 @@ export const defaultTicTacState = {
     7: null,
     8: null
   }
+}
+
+defaultTicTacState.score = {
+  [defaultTicTacState.usersCharacter]: 0,
+  [defaultTicTacState.computerCharacter]: 0
 }
 
 export function checkForWinner(ticTacBoard, state) {
@@ -42,15 +43,16 @@ export function checkForWinner(ticTacBoard, state) {
 
       /**
        * - CHECKS FOR:
-       *  - INDEX OF SQUARE IS WITHIN THE BOARD (0 - 8) VIA ARETRUTHY FUNCTION
+       *  - INDEX OF SQUARE IS WITHIN THE BOARD (0 - 8) VIA ARETRUTHY
        *  - HORIZONTAL SEQUENCE IN TOP, MIDDLE & BOTTOM LAYERS
        *  - DIAGONAL IN MIDDLE LAYER SQUARES
        *  - VERTICAL (SAME CHARACTER IN TOP, MIDDLE BOTTOM)
        */
 
-      let index1 = ticTacBoard[idx]
-      let index2 = ticTacBoard[idx + 1]
-      let index3 = ticTacBoard[idx + 2]
+      let horizontalIdx = idx === 0 || idx === 3 || idx === 6
+      let index1 = horizontalIdx && ticTacBoard[idx]
+      let index2 = horizontalIdx && ticTacBoard[idx + 1]
+      let index3 = horizontalIdx && ticTacBoard[idx + 2]
       let isHorizontalWin = index1 === index2 && index1 === index3
 
       if (curr[0] <= 2) {
@@ -76,17 +78,16 @@ export function checkForWinner(ticTacBoard, state) {
         if (
           isDiagonalWin ||
           (areTruthy(index1, index2, index3) &&
-            (isHorizontalWin ||
+            ((areTruthy(index1, index2, index3) && isHorizontalWin) ||
               (ticTacBoard[idx] === ticTacBoard[idx - 3] &&
                 ticTacBoard[idx] === ticTacBoard[idx + 3])))
         ) {
           acc = curr[1]
         }
       } else if (
-        areTruthy(index1, index2, index3) &&
-        (isHorizontalWin ||
-          (ticTacBoard[idx] === ticTacBoard[idx - 3] &&
-            ticTacBoard[idx] === ticTacBoard[idx - 6]))
+        (areTruthy(index1, index2, index3) && isHorizontalWin) ||
+        (ticTacBoard[idx] === ticTacBoard[idx - 3] &&
+          ticTacBoard[idx] === ticTacBoard[idx - 6])
       ) {
         acc = curr[1]
       }

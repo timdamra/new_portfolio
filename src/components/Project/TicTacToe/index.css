@@ -12,7 +12,7 @@
   height: 8rem;
 }
 
-.tictactoe > div > span {
+.tictactoe > div:not(.tictactoe__scoreboard) > span {
   width: 30%;
   padding: 12px;
   padding-top: 36px;
@@ -22,7 +22,7 @@
   text-align: center;
 }
 
-.tictactoe > div > span:hover {
+.tictactoe > div:not(.tictactoe__scoreboard) > span:hover {
   background-color: lightskyblue;
 }
 
@@ -43,6 +43,23 @@
   width: 80%;
 }
 
+.tictactoe__scoreboard {
+  justify-content: space-evenly;
+  margin-top: 3.2rem;
+}
+
+.tictactoe__scoreboard > span {
+  font-size: 2rem;
+  color: deepskyblue;
+  margin-right: 1.6rem;
+}
+
+.tictactoe__scoreboard--span--score {
+  background-color: black;
+  border: deepskyblue solid 2px;
+  padding: 0 1rem;
+}
+
 @media screen and (min-width: 600px) {
   .tictactoe > div {
     width: 48%;
@@ -50,7 +67,16 @@
 }
 
 @media screen and (min-width: 1024px) {
+  .tictactoe__scoreboard {
+    margin-top: 4rem;
+  }
+
   .tictactoe .ui.button {
-    margin: 2rem 4rem 0 0;
+    margin: 4rem 4rem 0 0;
+  }
+
+  .tictactoe__scoreboard > span {
+    margin-right: 4rem;
+    font-size: 3.2rem;
   }
 }

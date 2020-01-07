@@ -4,6 +4,7 @@ import { Button, Modal } from 'semantic-ui-react'
 import { useGlobalState } from 'state'
 import * as actions from 'actions'
 
+import ScoreBoard from './ScoreBoard'
 import './index.css'
 
 export const TicTacToe = () => {
@@ -12,7 +13,10 @@ export const TicTacToe = () => {
     ticTacModalIsOpen,
     ticTacStartButtonIsHidden,
     ticTacBoard,
-    gameIsOver
+    gameIsOver,
+    score,
+    usersCharacter,
+    computerCharacter
   } = state
 
   return (
@@ -115,6 +119,11 @@ export const TicTacToe = () => {
           CHOOSE LETTER
         </Button>
       )}
+      <ScoreBoard
+        score={score}
+        usersCharacter={usersCharacter}
+        computerCharacter={computerCharacter}
+      />
       <Modal
         size="mini"
         open={ticTacModalIsOpen}
