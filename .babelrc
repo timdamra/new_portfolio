@@ -1,4 +1,12 @@
 {
     "presets": ["@babel/preset-env", "@babel/preset-react"],
-    "plugins": ["@babel/plugin-transform-runtime", "@babel/plugin-proposal-class-properties"]
+    "plugins": ["@babel/plugin-transform-runtime", "@babel/plugin-proposal-class-properties", ["module-resolver", {        
+        "alias": {
+          "state": "./src/state",
+          "actions": "./src/actions",
+          "components": "./src/components",
+          "hooks": "./src/hooks"
+        }
+      }]
+    ]
 }

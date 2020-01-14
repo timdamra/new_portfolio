@@ -7,7 +7,8 @@
     "node": "^8.13.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --coverage",
+    "test:watch": "jest --watchAll",
     "build": "webpack --mode production",
     "build:dev": "webpack --mode development",
     "start:dev": "webpack-dev-server --open --mode development",
@@ -24,9 +25,12 @@
     "@babel/preset-env": "^7.7.4",
     "@babel/preset-react": "^7.7.4",
     "babel-eslint": "^10.0.3",
+    "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
+    "babel-plugin-module-resolver": "^4.0.0",
     "css-loader": "^2.1.1",
     "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.2",
     "eslint": "^5.16.0",
     "eslint-loader": "^2.2.1",
     "eslint-plugin-prettier": "^3.1.1",
