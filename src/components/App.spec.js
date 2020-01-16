@@ -1,5 +1,4 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
 import { shallow } from 'enzyme'
 
 import App from './App'
@@ -16,6 +15,12 @@ describe('App', () => {
       const nav = wrapper.find('Nav')
 
       expect(nav.length).toBe(1)
+    })
+
+    it('should render StateProvider component', () => {
+      const sp = wrapper.find('StateProvider')
+
+      expect(sp.length).toBe(1)
     })
   })
 })

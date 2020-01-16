@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav Snapshot should match snapshot 1`] = `
+<nav
+  className="nav p-t-8"
+>
+  <div
+    className="nav--link"
+    onClick={[Function]}
+  >
+    HOME
+  </div>
+  <div
+    className="nav--link"
+    onClick={[Function]}
+  >
+    MY WORK
+  </div>
+  <div
+    className="nav--link"
+    onClick={[Function]}
+  >
+    CONTACT
+  </div>
+</nav>
+`;
